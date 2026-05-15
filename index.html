@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leyendas del Basketball</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="bg-dark"></div>
+    <div class="bg-img" id="bg"></div>
+    <div class="bg-scrim"></div>
+
+    <div class="inner">
+      <h1>Leyendas del Basketball</h1>
+
+      <div class="btns">
+
+        <button class="btn" data-img="imagenes/jordan.jpg" data-name="Michael Jordan" onclick="pick(this)">
+          Michael Jordan
+        </button>
+
+        <button class="btn" data-img="imagenes/lebron.jpg" data-name="LeBron James" onclick="pick(this)">
+          LeBron James
+        </button>
+
+        <button class="btn" data-img="imagenes/kobe.jpg" data-name="Kobe Bryant" onclick="pick(this)">
+          Kobe Bryant
+        </button>
+
+        <button class="btn" data-img="imagenes/curry.jpg" data-name="Stephen Curry" onclick="pick(this)">
+          Stephen Curry
+        </button>
+        <button class="btn" data-img="imagenes/lamelo.jpg" data-name="Lamelo Ball" onclick="pick(this)">
+          Lamelo Ball
+        </button>
+
+      </div>
+
+      <div class="player-name" id="pname"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
