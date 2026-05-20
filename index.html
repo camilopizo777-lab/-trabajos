@@ -5,41 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Leyendas del Basketball</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="imagenes/basketball.png" type="image/png" />
 </head>
 <body>
 
-  <div class="wrap">
-    <div class="bg-dark"></div>
-    <div class="bg-img" id="bg"></div>
-    <div class="bg-scrim"></div>
+  <div id="pagina">
 
-    <div class="inner">
-      <h1>Leyendas del Basketball</h1>
+    <img id="fondo" src="" alt="jugador" />
 
-      <div class="btns">
+    <div id="contenido">
 
-        <button class="btn" data-img="imagenes/jordan.jpg" data-name="Michael Jordan" onclick="pick(this)">
-          Michael Jordan
-        </button>
+      <link rel="icon" href="imagenes/basketball.png" type="image/png" />
 
-        <button class="btn" data-img="imagenes/lebron.jpg" data-name="LeBron James" onclick="pick(this)">
-          LeBron James
-        </button>
+      <h1 id="titulo">Leyendas del Basketball</h1>
 
-        <button class="btn" data-img="imagenes/kobe.jpg" data-name="Kobe Bryant" onclick="pick(this)">
-          Kobe Bryant
-        </button>
-
-        <button class="btn" data-img="imagenes/curry.jpg" data-name="Stephen Curry" onclick="pick(this)">
-          Stephen Curry
-        </button>
-        <button class="btn" data-img="imagenes/lamelo.jpg" data-name="Lamelo Ball" onclick="pick(this)">
-          Lamelo Ball
-        </button>
-
+      <!-- Contenedores de los botones con los nombres en el HTML -->
+      <div id="menu" class="menu">
+        <button id="btn-jordan" class="btn-menu">Michael Jordan</button>
+        <button id="btn-lebron" class="btn-menu">LeBron James</button>
+        <button id="btn-kobe"   class="btn-menu">Kobe Bryant</button>
+        <button id="btn-curry"  class="btn-menu">Stephen Curry</button>
+        <button id="btn-lamelo" class="btn-menu">LaMelo Ball</button>
       </div>
 
-      <div class="player-name" id="pname"></div>
+      <p id="nombre"></p>
+
     </div>
   </div>
 

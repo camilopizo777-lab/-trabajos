@@ -1,33 +1,46 @@
-function pick(el) {
+// Variables para seleccionar los elementos del HTML
+var fondo    = document.getElementById("fondo");
+var nombre   = document.getElementById("nombre");
 
-  // Quitar clase activa de todos los botones
-  document.querySelectorAll('.btn').forEach(function(b) {
-    b.classList.remove('active');
-  });
+var btnJordan = document.getElementById("btn-jordan");
+var btnLebron = document.getElementById("btn-lebron");
+var btnKobe   = document.getElementById("btn-kobe");
+var btnCurry  = document.getElementById("btn-curry");
+var btnLamelo = document.getElementById("btn-lamelo");
 
-  // Marcar el botón clickeado como activo
-  el.classList.add('active');
+// Funcion que cambia la imagen y el nombre segun el jugador
+function cambiarJugador(jugador) {
 
-  // Leer imagen y nombre desde los atributos del botón
-  var img  = el.getAttribute('data-img');
-  var name = el.getAttribute('data-name');
+  if (jugador == "jordan") {
+    fondo.src        = "imagenes/jordan.jpg";
+    nombre.textContent = "Michael Jordan";
+  }
 
-  // Cambiar imagen de fondo con efecto fade
-  var bg = document.getElementById('bg');
-  bg.style.opacity = '0';
+  if (jugador == "lebron") {
+    fondo.src        = "imagenes/lebron.jpg";
+    nombre.textContent = "LeBron James";
+  }
 
-  setTimeout(function() {
-    bg.style.backgroundImage = "url('" + img + "')";
-    bg.style.opacity = '1';
-  }, 250);
+  if (jugador == "kobe") {
+    fondo.src        = "imagenes/kobe.jpg";
+    nombre.textContent = "Kobe Bryant";
+  }
 
-  // Mostrar nombre con efecto fade
-  var pname = document.getElementById('pname');
-  pname.classList.remove('visible');
+  if (jugador == "curry") {
+    fondo.src        = "imagenes/curry.jpg";
+    nombre.textContent = "Stephen Curry";
+  }
 
-  setTimeout(function() {
-    pname.textContent = name;
-    pname.classList.add('visible');
-  }, 300);
+  if (jugador == "lamelo") {
+    fondo.src        = "imagenes/lamelo.jpg";
+    nombre.textContent = "LaMelo Ball";
+  }
 
 }
+
+// Eventos click para cada boton
+btnJordan.addEventListener("click", function() { cambiarJugador("jordan"); });
+btnLebron.addEventListener("click", function() { cambiarJugador("lebron"); });
+btnKobe.addEventListener("click",   function() { cambiarJugador("kobe");   });
+btnCurry.addEventListener("click",  function() { cambiarJugador("curry");  });
+btnLamelo.addEventListener("click", function() { cambiarJugador("lamelo"); });
